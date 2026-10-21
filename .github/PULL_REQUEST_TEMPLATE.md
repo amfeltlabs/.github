@@ -16,5 +16,5 @@ Category (Feature / Fix / Breaking) comes from your conventional-commit title â€
 title is also how you keep a change OUT of the changelog: type non-user-facing work as
 chore/refactor/docs/build (the kernel drops those), and remember the public site shows
 Features + Breaking only.
-See https://portal.infusal.io/contributing/changelog-notes/
+See https://portal.amfelt.com/contributing/changelog-notes/
 -->

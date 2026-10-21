@@ -85,7 +85,7 @@ body:
       label: Story DoD
       description: >
         Always apply. Full per-level checklist:
-        https://portal.infusal.io/reference/conventions/spine-decomposition/
+        https://portal.amfelt.com/reference/conventions/spine-decomposition/
       options:
         - label: Merged to main (trunk-based, fast-forward-only); branch named {issue-number}-<desc>
         - label: Unit tests added using mock backing services (no runtime deps)
