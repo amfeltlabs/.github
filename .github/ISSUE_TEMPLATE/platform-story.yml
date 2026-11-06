@@ -1,18 +1,40 @@
 name: Platform Story
-description: Repo-specific unit of platform / developer-experience work (not capability-aligned)
-title: "[Platform] "
+description: Repo-specific unit of work (roughly a phase within one repo) (platform plane)
 type: Story
 labels: ["area:platform"]
 body:
-  - type: textarea
-    id: summary
-    attributes:
-      label: Summary
-      description: What needs doing, and why it is platform/infra rather than a capability feature.
-    validations:
-      required: true
   - type: markdown
     attributes:
       value: |
-        This issue routes to the **Platform** board (`area:platform`). A triager
-        will set the `Area` and `Priority` from the _Needs triage_ view.
+        Give the issue a title that states the outcome in one line, in the words a reader would use to recognize it. No track letters, codenames, document names or `[Epic]`-style prefixes.
+  - type: textarea
+    id: intent
+    attributes:
+      label: "Intent"
+      description: >
+        One line: why this, why now.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: "Outcome"
+      description: >
+        One or two concrete, testable completion statements.
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: "Parent"
+      description: >
+        Parent Feature or Phase (`infusal/roadmap#nn`).
+      placeholder: "infusal/roadmap#nn"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes"
+      description: >
+        Open questions, alternatives, risks.

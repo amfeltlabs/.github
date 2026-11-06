@@ -1,0 +1,40 @@
+name: Business Task
+description: Commit-sized work item (≈ one task per commit) (business plane)
+type: Task
+labels: ["area:business"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Give the issue a title that states the outcome in one line, in the words a reader would use to recognize it. No track letters, codenames, document names or `[Epic]`-style prefixes.
+  - type: textarea
+    id: intent
+    attributes:
+      label: "Intent"
+      description: >
+        One line: why this, why now.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: "Outcome"
+      description: >
+        One or two concrete, testable completion statements.
+    validations:
+      required: true
+  - type: input
+    id: parent
+    attributes:
+      label: "Parent"
+      description: >
+        Parent Story (`#nn` in this repo, or `infusal/<repo>#nn`).
+      placeholder: "#nn"
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes"
+      description: >
+        Open questions, alternatives, risks.
