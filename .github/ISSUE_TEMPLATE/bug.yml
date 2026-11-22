@@ -45,8 +45,8 @@ body:
         - `exposure:internal` - neither: build, CI, tests, tooling, internal docs, developer-only paths.
 
         Full definitions: https://portal.amfelt.com/engineering/delivery/boards/reference/#exposure-labels
-        GitHub issue forms can't apply a label from a dropdown, so triage applies the matching
-        `exposure:*` label from your choice.
+        GitHub issue forms can't apply a label from a dropdown, so the matching
+        `exposure:*` label is applied afterwards from your choice.
       options:
         - "exposure:tester - an outside user can cause or observe it"
         - "exposure:operator - only Amfelt staff meet it, but it can hurt testers"
