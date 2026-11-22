@@ -31,6 +31,29 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: exposure
+    attributes:
+      label: Who can reach this bug?
+      description: |
+        Which kind of user can cause or observe the bug. When two fit, pick the more exposed one.
+        - `exposure:tester` - someone outside Amfelt who uses the product can cause or observe it
+          (app, agent or CLI, a connector they run, a contract or plugin they write, the public
+          website and docs, an email the platform sends).
+        - `exposure:operator` - only Amfelt staff meet it while running prod or supporting testers;
+          it can degrade or stop what testers use, or damage their data.
+        - `exposure:internal` - neither: build, CI, tests, tooling, internal docs, developer-only paths.
+
+        Full definitions: https://portal.amfelt.com/engineering/delivery/boards/reference/#exposure-labels
+        GitHub issue forms can't apply a label from a dropdown, so triage applies the matching
+        `exposure:*` label from your choice.
+      options:
+        - "exposure:tester - an outside user can cause or observe it"
+        - "exposure:operator - only Amfelt staff meet it, but it can hurt testers"
+        - "exposure:internal - build, CI, tests, tooling, developer-only"
+    validations:
+      required: true
+
   - type: textarea
     id: reproduction
     attributes:
